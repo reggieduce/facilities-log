@@ -227,7 +227,11 @@ function render() {
       ? field('Original Request', e.description)
       : '<div class="field"><dt>Original Request</dt><dd class="muted">Not recorded</dd></div>';
 
-    body += field('Update', e.update);
+    if (e.status !== 'open' && e.update &&
+        !/^(work complete|notification sent|status has been)/i.test(e.update)) {
+      body += field('Update', e.update);
+    }
+
     body += field('Closing Comments', e.closingComments);
     body += field('Type', type);
     body += field('Assigned To', e.assignedTo);
