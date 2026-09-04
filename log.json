@@ -29,16 +29,16 @@
   },
   {
     "id": "99068",
-    "status": "open",
-    "category": "Custodial",
-    "subcategory": "Cleanup/Leaks (General)",
-    "description": "GBB Coffee Spill Gallagher - coffee maker went rouge and",
+    "status": "complete",
+    "category": "general",
+    "subcategory": "",
+    "description": "",
     "update": "",
     "closingComments": "",
-    "assignedTo": "Ian Hamilton",
+    "assignedTo": "Ian Hamilton Closed On: Wednesday, September 2, 2026 9:41AM",
     "closedOn": "",
     "eventDate": "",
-    "lastSeen": "2026-09-04T00:45:19.749Z",
+    "lastSeen": "2026-09-04T01:37:16.214Z",
     "created": ""
   }
 ]
