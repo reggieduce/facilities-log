@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maintenance log</title>
+<style>
+  :root {
+    --ink: #1a1715;
+    --ink-soft: #6b625c;
+    --ink-faint: #9a918a;
+    --rule: #ded7d0;
+    --paper: #faf8f6;
+    --card: #ffffff;
+    --maroon: #7a232f;
+    --open: #b4541a;
+    --done: #4a7a52;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 16px/1.5 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-feature-settings: "tnum" 1;
+  }
+
+  .wrap { max-width: 940px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  /* ---- masthead ---- */
+
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+  }
+
+  .masthead h1 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+
+  .tally {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  .tally b {
+    font-size: 34px;
+    font-weight: 650;
+    line-height: 1;
+    color: var(--open);
+    letter-spacing: -0.02em;
+  }
+
+  .tally.clear b { color: var(--done); }
+
+  /* ---- controls ---- */
+
+  .controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 18px 0 4px;
+  }
+
+  input[type=search], select {
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 7px 10px;
+  }
+
+  input[type=search] { flex: 1 1 220px; min-width: 0; }
+
+  input[type=search]:focus-visible, select:focus-visible, button:focus-visible {
+    outline: 2px solid var(--maroon);
+    outline-offset: 1px;
+  }
+
+  .segmented { display: flex; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+
+  .segmented button {
+    font: inherit;
+    font-size: 14px;
+    background: var(--card);
+    color: var(--ink-soft);
+    border: 0;
+    border-right: 1px solid var(--rule);
+    padding: 7px 13px;
+    cursor: pointer;
+  }
+
+  .segmented button:last-child { border-right: 0; }
+  .segmented button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+  .meta {
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin: 14px 0 6px;
+  }
+
+  /* ---- entries ---- */
+
+  .entry {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--open);
+    border-radius: 3px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+  }
+
+  .entry[data-status="complete"] { border-left-color: var(--done); }
+  .entry[data-status="in progress"] { border-left-color: var(--maroon); }
+
+  .entry-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .req-id {
+    font-variant-numeric: tabular-nums;
+    font-weight: 650;
+    font-size: 15px;
+  }
+
+  .status {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--open);
+  }
+
+  .entry[data-status="complete"] .status { color: var(--done); }
+  .entry[data-status="in progress"] .status { color: var(--maroon); }
+
+  .when { font-size: 13px; color: var(--ink-faint); margin-left: auto; }
+
+  .desc { margin: 0 0 8px; line-height: 1.45; }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .update {
+    margin: 9px 0 0;
+    padding-top: 9px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+
+  /* ---- states ---- */
+
+  .state {
+    border: 1px dashed var(--rule);
+    border-radius: 3px;
+    padding: 34px 22px;
+    text-align: center;
+    color: var(--ink-soft);
+  }
+
+  .state p { margin: 0 0 6px; }
+  .state p:last-child { margin: 0; font-size: 14px; color: var(--ink-faint); }
+  .state code { font-size: 13px; background: #f0ebe6; padding: 1px 5px; border-radius: 2px; }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 22px 14px 60px; }
+    .when { margin-left: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1>Maintenance log</h1>
+    <div class="tally" id="tally" hidden>
+      <b id="openCount">0</b><span id="tallyLabel">requests open</span>
+    </div>
+  </header>
+
+  <div class="controls" id="controls" hidden>
+    <div class="segmented" role="group" aria-label="Filter by status">
+      <button type="button" data-filter="open" aria-pressed="true">Open</button>
+      <button type="button" data-filter="complete" aria-pressed="false">Complete</button>
+      <button type="button" data-filter="all" aria-pressed="false">All</button>
+    </div>
+    <select id="cat" aria-label="Filter by category"><option value="">All categories</option></select>
+    <input type="search" id="q" placeholder="Search requests, rooms, or techs">
+  </div>
+
+  <p class="meta" id="meta" hidden></p>
+  <main id="list"><div class="state"><p>Loading the log…</p></div></main>
+
+</div>
+
+<script>
+var entries = [];
+var filter = 'open';
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+function isOpen(e) { return e.status !== 'complete'; }
+
+function sortKey(e) {
+  var d = Date.parse(e.closedOn || e.eventDate || e.created || '');
+  return isNaN(d) ? 0 : d;
+}
+
+function render() {
+  var q = document.getElementById('q').value.trim().toLowerCase();
+  var cat = document.getElementById('cat').value;
+
+  var rows = entries.filter(function (e) {
+    if (filter === 'open' && !isOpen(e)) return false;
+    if (filter === 'complete' && isOpen(e)) return false;
+    if (cat && e.category !== cat) return false;
+    if (q) {
+      var hay = [e.id, e.description, e.update, e.closingComments, e.assignedTo, e.category, e.subcategory]
+        .join(' ').toLowerCase();
+      if (hay.indexOf(q) === -1) return false;
+    }
+    return true;
+  });
+
+  rows.sort(function (a, b) {
+    if (isOpen(a) !== isOpen(b)) return isOpen(a) ? -1 : 1;
+    return sortKey(b) - sortKey(a);
+  });
+
+  var meta = document.getElementById('meta');
+  meta.hidden = false;
+  meta.textContent = rows.length + (rows.length === 1 ? ' request' : ' requests') +
+    (rows.length === entries.length ? '' : ' of ' + entries.length);
+
+  var list = document.getElementById('list');
+
+  if (!rows.length) {
+    list.innerHTML = '<div class="state"><p>Nothing matches those filters.</p>' +
+      '<p>Try switching to All, or clearing the search.</p></div>';
+    return;
+  }
+
+  list.innerHTML = rows.map(function (e) {
+    var label = e.status === 'complete' ? 'Complete'
+              : e.status === 'in progress' ? 'In progress' : 'Open';
+    var date = e.closedOn || e.eventDate || e.created || '';
+    var facts = [];
+    if (e.category) facts.push('<span>' + esc(e.category) +
+      (e.subcategory ? ' · ' + esc(e.subcategory) : '') + '</span>');
+    if (e.assignedTo) facts.push('<span>Assigned to ' + esc(e.assignedTo) + '</span>');
+
+    var note = e.closingComments || e.update || '';
+
+    return '<article class="entry" data-status="' + esc(e.status || 'open') + '">' +
+      '<div class="entry-head">' +
+        '<span class="req-id">#' + esc(e.id) + '</span>' +
+        '<span class="status">' + label + '</span>' +
+        (date ? '<span class="when">' + esc(date) + '</span>' : '') +
+      '</div>' +
+      '<p class="desc">' + (esc(e.description) || '<em>No description recorded</em>') + '</p>' +
+      (facts.length ? '<div class="facts">' + facts.join('') + '</div>' : '') +
+      (note ? '<p class="update">' + esc(note) + '</p>' : '') +
+    '</article>';
+  }).join('');
+}
+
+function boot(data) {
+  entries = Array.isArray(data) ? data : [];
+
+  var list = document.getElementById('list');
+  if (!entries.length) {
+    list.innerHTML = '<div class="state"><p>No requests logged yet.</p>' +
+      '<p>Entries appear here once a service request email comes through.</p></div>';
+    return;
+  }
+
+  var open = entries.filter(isOpen).length;
+  var tally = document.getElementById('tally');
+  tally.hidden = false;
+  tally.classList.toggle('clear', open === 0);
+  document.getElementById('openCount').textContent = open;
+  document.getElementById('tallyLabel').textContent =
+    open === 0 ? 'nothing open' : (open === 1 ? 'request open' : 'requests open');
+
+  var cats = [];
+  entries.forEach(function (e) {
+    if (e.category && cats.indexOf(e.category) === -1) cats.push(e.category);
+  });
+  cats.sort();
+  var sel = document.getElementById('cat');
+  cats.forEach(function (c) {
+    var o = document.createElement('option');
+    o.value = c; o.textContent = c;
+    sel.appendChild(o);
+  });
+
+  document.getElementById('controls').hidden = false;
+  render();
+}
+
+document.querySelectorAll('.segmented button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    filter = b.dataset.filter;
+    document.querySelectorAll('.segmented button').forEach(function (o) {
+      o.setAttribute('aria-pressed', String(o === b));
+    });
+    render();
+  });
+});
+
+document.getElementById('q').addEventListener('input', render);
+document.getElementById('cat').addEventListener('change', render);
+
+fetch('./log.json?v=' + Date.now())
+  .then(function (r) {
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  })
+  .then(boot)
+  .catch(function (err) {
+    document.getElementById('list').innerHTML =
+      '<div class="state"><p>Could not load the log.</p>' +
+      '<p>Check that <code>log.json</code> sits next to this page and contains valid JSON. (' +
+      esc(err.message) + ')</p></div>';
+  });
+</script>
+</body>
+</html>
