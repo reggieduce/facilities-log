@@ -7,9 +7,10 @@
 <style>
   :root {
     --ink: #1a1715;
-    --ink-soft: #6b625c;
-    --ink-faint: #9a918a;
+    --ink-soft: #5f5751;
+    --ink-faint: #948b84;
     --rule: #ded7d0;
+    --rule-soft: #ece7e2;
     --paper: #faf8f6;
     --card: #ffffff;
     --maroon: #7a232f;
@@ -18,7 +19,6 @@
   }
 
   * { box-sizing: border-box; }
-
   html { -webkit-text-size-adjust: 100%; }
 
   body {
@@ -29,9 +29,7 @@
     font-feature-settings: "tnum" 1;
   }
 
-  .wrap { max-width: 940px; margin: 0 auto; padding: 32px 20px 80px; }
-
-  /* ---- masthead ---- */
+  .wrap { max-width: 900px; margin: 0 auto; padding: 32px 20px 80px; }
 
   .masthead {
     display: flex;
@@ -43,155 +41,96 @@
     padding-bottom: 14px;
   }
 
-  .masthead h1 {
-    margin: 0;
-    font-size: 21px;
-    font-weight: 650;
-    letter-spacing: -0.01em;
-  }
+  .masthead h1 { margin: 0; font-size: 21px; font-weight: 650; letter-spacing: -0.01em; }
 
-  .tally {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    font-size: 14px;
-    color: var(--ink-soft);
-  }
-
+  .tally { display: flex; align-items: baseline; gap: 8px; font-size: 14px; color: var(--ink-soft); }
   .tally b {
-    font-size: 34px;
-    font-weight: 650;
-    line-height: 1;
-    color: var(--open);
-    letter-spacing: -0.02em;
+    font-size: 34px; font-weight: 650; line-height: 1;
+    color: var(--open); letter-spacing: -0.02em;
   }
-
   .tally.clear b { color: var(--done); }
 
-  /* ---- controls ---- */
-
   .controls {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
     margin: 18px 0 4px;
   }
 
   input[type=search], select {
-    font: inherit;
-    font-size: 14px;
-    color: var(--ink);
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 3px;
-    padding: 7px 10px;
+    font: inherit; font-size: 14px; color: var(--ink);
+    background: var(--card); border: 1px solid var(--rule);
+    border-radius: 3px; padding: 7px 10px;
   }
 
   input[type=search] { flex: 1 1 220px; min-width: 0; }
 
   input[type=search]:focus-visible, select:focus-visible, button:focus-visible {
-    outline: 2px solid var(--maroon);
-    outline-offset: 1px;
+    outline: 2px solid var(--maroon); outline-offset: 1px;
   }
 
   .segmented { display: flex; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
-
   .segmented button {
-    font: inherit;
-    font-size: 14px;
-    background: var(--card);
-    color: var(--ink-soft);
-    border: 0;
-    border-right: 1px solid var(--rule);
-    padding: 7px 13px;
-    cursor: pointer;
+    font: inherit; font-size: 14px; background: var(--card); color: var(--ink-soft);
+    border: 0; border-right: 1px solid var(--rule); padding: 7px 13px; cursor: pointer;
   }
-
   .segmented button:last-child { border-right: 0; }
   .segmented button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 
-  .meta {
-    font-size: 13px;
-    color: var(--ink-faint);
-    margin: 14px 0 6px;
-  }
-
-  /* ---- entries ---- */
+  .meta { font-size: 13px; color: var(--ink-faint); margin: 14px 0 8px; }
 
   .entry {
     background: var(--card);
     border: 1px solid var(--rule);
     border-left: 3px solid var(--open);
     border-radius: 3px;
-    padding: 14px 16px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .entry[data-status="complete"] { border-left-color: var(--done); }
   .entry[data-status="in progress"] { border-left-color: var(--maroon); }
 
   .entry-head {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 6px;
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--rule-soft);
   }
 
-  .req-id {
-    font-variant-numeric: tabular-nums;
-    font-weight: 650;
-    font-size: 15px;
-  }
+  .req-id { font-variant-numeric: tabular-nums; font-weight: 650; font-size: 15px; }
 
-  .status {
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--open);
-  }
-
+  .status { font-size: 12.5px; font-weight: 600; color: var(--open); }
   .entry[data-status="complete"] .status { color: var(--done); }
   .entry[data-status="in progress"] .status { color: var(--maroon); }
 
   .when { font-size: 13px; color: var(--ink-faint); margin-left: auto; }
 
-  .desc { margin: 0 0 8px; line-height: 1.45; }
+  .fields { margin: 0; padding: 4px 18px 14px; }
 
-  .facts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-    font-size: 13.5px;
-    color: var(--ink-soft);
+  .field {
+    display: grid;
+    grid-template-columns: 138px 1fr;
+    gap: 4px 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule-soft);
   }
 
-  .update {
-    margin: 9px 0 0;
-    padding-top: 9px;
-    border-top: 1px solid var(--rule);
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.45;
-  }
+  .field:last-child { border-bottom: 0; padding-bottom: 0; }
 
-  /* ---- states ---- */
+  .field dt { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+  .field dd { margin: 0; font-size: 15px; line-height: 1.45; }
+  .field dd.muted { color: var(--ink-faint); }
 
   .state {
-    border: 1px dashed var(--rule);
-    border-radius: 3px;
-    padding: 34px 22px;
-    text-align: center;
-    color: var(--ink-soft);
+    border: 1px dashed var(--rule); border-radius: 3px;
+    padding: 34px 22px; text-align: center; color: var(--ink-soft);
   }
-
   .state p { margin: 0 0 6px; }
   .state p:last-child { margin: 0; font-size: 14px; color: var(--ink-faint); }
   .state code { font-size: 13px; background: #f0ebe6; padding: 1px 5px; border-radius: 2px; }
 
-  @media (max-width: 560px) {
+  @media (max-width: 620px) {
     .wrap { padding: 22px 14px 60px; }
     .when { margin-left: 0; width: 100%; }
+    .field { grid-template-columns: 1fr; gap: 2px; padding: 9px 0; }
+    .field dt { font-size: 13px; }
   }
 </style>
 </head>
@@ -237,6 +176,11 @@ function sortKey(e) {
   return isNaN(d) ? 0 : d;
 }
 
+function field(label, value) {
+  if (!value) return '';
+  return '<div class="field"><dt>' + label + '</dt><dd>' + esc(value) + '</dd></div>';
+}
+
 function render() {
   var q = document.getElementById('q').value.trim().toLowerCase();
   var cat = document.getElementById('cat').value;
@@ -274,23 +218,28 @@ function render() {
   list.innerHTML = rows.map(function (e) {
     var label = e.status === 'complete' ? 'Complete'
               : e.status === 'in progress' ? 'In progress' : 'Open';
-    var date = e.closedOn || e.eventDate || e.created || '';
-    var facts = [];
-    if (e.category) facts.push('<span>' + esc(e.category) +
-      (e.subcategory ? ' · ' + esc(e.subcategory) : '') + '</span>');
-    if (e.assignedTo) facts.push('<span>Assigned to ' + esc(e.assignedTo) + '</span>');
 
-    var note = e.closingComments || e.update || '';
+    var type = e.category
+      ? e.category + (e.subcategory ? ' | ' + e.subcategory : '')
+      : '';
+
+    var body = e.description
+      ? field('Original Request', e.description)
+      : '<div class="field"><dt>Original Request</dt><dd class="muted">Not recorded</dd></div>';
+
+    body += field('Update', e.update);
+    body += field('Closing Comments', e.closingComments);
+    body += field('Type', type);
+    body += field('Assigned To', e.assignedTo);
+    body += field('Closed On', e.closedOn);
 
     return '<article class="entry" data-status="' + esc(e.status || 'open') + '">' +
       '<div class="entry-head">' +
-        '<span class="req-id">#' + esc(e.id) + '</span>' +
+        '<span class="req-id">Request ' + esc(e.id) + '</span>' +
         '<span class="status">' + label + '</span>' +
-        (date ? '<span class="when">' + esc(date) + '</span>' : '') +
+        (e.eventDate ? '<span class="when">' + esc(e.eventDate) + '</span>' : '') +
       '</div>' +
-      '<p class="desc">' + (esc(e.description) || '<em>No description recorded</em>') + '</p>' +
-      (facts.length ? '<div class="facts">' + facts.join('') + '</div>' : '') +
-      (note ? '<p class="update">' + esc(note) + '</p>' : '') +
+      '<dl class="fields">' + body + '</dl>' +
     '</article>';
   }).join('');
 }
@@ -313,17 +262,21 @@ function boot(data) {
   document.getElementById('tallyLabel').textContent =
     open === 0 ? 'nothing open' : (open === 1 ? 'request open' : 'requests open');
 
+  var sel = document.getElementById('cat');
+  var keep = sel.value;
+  sel.innerHTML = '<option value="">All categories</option>';
+
   var cats = [];
   entries.forEach(function (e) {
     if (e.category && cats.indexOf(e.category) === -1) cats.push(e.category);
   });
   cats.sort();
-  var sel = document.getElementById('cat');
   cats.forEach(function (c) {
     var o = document.createElement('option');
     o.value = c; o.textContent = c;
     sel.appendChild(o);
   });
+  sel.value = keep;
 
   document.getElementById('controls').hidden = false;
   render();
@@ -342,26 +295,26 @@ document.querySelectorAll('.segmented button').forEach(function (b) {
 document.getElementById('q').addEventListener('input', render);
 document.getElementById('cat').addEventListener('change', render);
 
-fetch('./log.json?v=' + Date.now())
-  .then(function (r) {
-    if (!r.ok) throw new Error(r.status);
-    return r.json();
-  })
-  .then(boot)
-  .catch(function (err) {
-    document.getElementById('list').innerHTML =
-      '<div class="state"><p>Could not load the log.</p>' +
-      '<p>Check that <code>log.json</code> sits next to this page and contains valid JSON. (' +
-      esc(err.message) + ')</p></div>';
-  });
-  setInterval(function () {
+function load(initial) {
   fetch('./log.json?v=' + Date.now())
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (JSON.stringify(data) !== JSON.stringify(entries)) boot(data);
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
     })
-    .catch(function () {});
-}, 60000);
+    .then(function (data) {
+      if (initial || JSON.stringify(data) !== JSON.stringify(entries)) boot(data);
+    })
+    .catch(function (err) {
+      if (!initial) return;
+      document.getElementById('list').innerHTML =
+        '<div class="state"><p>Could not load the log.</p>' +
+        '<p>Check that <code>log.json</code> sits next to this page and contains valid JSON. (' +
+        esc(err.message) + ')</p></div>';
+    });
+}
+
+load(true);
+setInterval(function () { load(false); }, 60000);
 </script>
 </body>
 </html>
