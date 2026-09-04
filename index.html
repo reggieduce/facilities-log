@@ -354,6 +354,14 @@ fetch('./log.json?v=' + Date.now())
       '<p>Check that <code>log.json</code> sits next to this page and contains valid JSON. (' +
       esc(err.message) + ')</p></div>';
   });
+  setInterval(function () {
+  fetch('./log.json?v=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (JSON.stringify(data) !== JSON.stringify(entries)) boot(data);
+    })
+    .catch(function () {});
+}, 60000);
 </script>
 </body>
 </html>
