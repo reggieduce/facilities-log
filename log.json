@@ -1,5 +1,19 @@
 [
   {
+    "id": "99523",
+    "status": "in progress",
+    "category": "Building Repairs",
+    "subcategory": "",
+    "description": "The East door handle inside the building has broken off after being fixed once already this fall.",
+    "update": "d.",
+    "closingComments": "",
+    "assignedTo": "Joshua Johnson # #",
+    "closedOn": "",
+    "eventDate": "Thursday, September 10, 2026",
+    "lastSeen": "2026-09-11T20:55:58.418Z",
+    "created": "Thursday, September 10, 2026"
+  },
+  {
     "id": "99563",
     "status": "open",
     "category": "Doors/Locks/Keys",
