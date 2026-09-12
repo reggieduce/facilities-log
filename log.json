@@ -1,31 +1,31 @@
 [
   {
-    "id": "90004",
-    "status": "in progress",
-    "category": "Building Repairs",
-    "subcategory": "Patch & Paint",
-    "description": "Please patch and paint GBB 329. Office is currently unoccupied and is being prepared to offer to a new occupant.",
-    "update": "YOUR REQUEST CLICK THIS LINE",
+    "id": "99563",
+    "status": "open",
+    "category": "Doors/Locks/Keys",
+    "subcategory": "",
+    "description": "Keys issued to the COB",
+    "update": "",
     "closingComments": "",
-    "assignedTo": "Martin Fetter",
+    "assignedTo": "Stephanie Lyons",
     "closedOn": "",
-    "eventDate": "Fri Sep 04 2026",
-    "lastSeen": "2026-09-12T20:00:43.288Z",
-    "created": "Fri Sep 04 2026"
+    "eventDate": "2026-09-11",
+    "lastSeen": "2026-09-11T19:20:58.418Z",
+    "created": "2026-09-11"
   },
   {
-    "id": "98772",
+    "id": "99523",
     "status": "complete",
-    "category": "Plumbing",
-    "subcategory": "Clogged Toilet/Urinal/Sink",
-    "description": "GBB Clogged Sink Gallagher - 2nd floor Mens restroom, 220, sink is clogged",
+    "category": "Building Repairs",
+    "subcategory": "Equipment Repairs",
+    "description": "The East door handle inside the building has broken off after being fixed once already this fall.",
     "update": "",
-    "closingComments": "Resolved issues",
-    "assignedTo": "Slade Johnson",
-    "closedOn": "Wednesday, September 2, 2026 11:25AM MDT",
-    "eventDate": "Wednesday, September 2, 2026",
-    "lastSeen": "2026-09-12T20:00:43.286Z",
-    "created": "Wednesday, September 2, 2026"
+    "closingComments": "Work Complete 9/10/2026 JJ",
+    "assignedTo": "Joshua Johnson",
+    "closedOn": "2026-09-10 3:01PM MDT",
+    "eventDate": "2026-09-10",
+    "lastSeen": "2026-09-12T20:00:43.287Z",
+    "created": "2026-09-10"
   },
   {
     "id": "99466",
@@ -37,9 +37,9 @@
     "closingComments": "",
     "assignedTo": "Andrew Williams",
     "closedOn": "",
-    "eventDate": "Wednesday, September 9, 2026",
+    "eventDate": "2026-09-09",
     "lastSeen": "2026-09-12T20:00:43.287Z",
-    "created": "Wednesday, September 9, 2026"
+    "created": "2026-09-09"
   },
   {
     "id": "92813",
@@ -50,10 +50,24 @@
     "update": "",
     "closingComments": "",
     "assignedTo": "Day Crew UMM",
-    "closedOn": "Thursday, August 27, 2026 9:48AM MDT",
-    "eventDate": "Tuesday, September 8, 2026",
+    "closedOn": "2026-08-27 9:48AM MDT",
+    "eventDate": "2026-09-08",
     "lastSeen": "2026-09-12T20:00:43.287Z",
-    "created": "Tuesday, September 8, 2026"
+    "created": "2026-09-08"
+  },
+  {
+    "id": "98772",
+    "status": "complete",
+    "category": "Plumbing",
+    "subcategory": "Clogged Toilet/Urinal/Sink",
+    "description": "GBB Clogged Sink Gallagher - 2nd floor Mens restroom, 220, sink is clogged",
+    "update": "",
+    "closingComments": "Resolved issues",
+    "assignedTo": "Slade Johnson",
+    "closedOn": "2026-09-02 11:25AM MDT",
+    "eventDate": "2026-09-02",
+    "lastSeen": "2026-09-12T20:00:43.286Z",
+    "created": "2026-09-02"
   },
   {
     "id": "99036",
@@ -61,83 +75,27 @@
     "category": "Doors/Locks/Keys",
     "subcategory": "Door Repairs",
     "description": "The door on the North side of 348- an office of cubicles for our adjunct professors- does not unlock from the inside, only from the outside. Can we get this fixed so in an emergency our adjuncts can exit out of the North side of the room? Thank you!",
-    "update": "d.",
+    "update": "",
     "closingComments": "",
     "assignedTo": "Jason Moran",
     "closedOn": "",
-    "eventDate": "Wednesday, September 2, 2026",
+    "eventDate": "2026-09-02",
     "lastSeen": "2026-09-12T20:00:43.286Z",
-    "created": "Wednesday, September 2, 2026"
+    "created": "2026-09-02"
   },
   {
-    "id": "99523",
+    "id": "99034",
     "status": "complete",
     "category": "Building Repairs",
-    "subcategory": "Equipment Repairs",
-    "description": "The East door handle inside the building has broken off after being fixed once already this fall.",
+    "subcategory": "Other",
+    "description": "The door handle on the gender neutral restroom next to GBB 388 is messed up and will easily lock. Can we get this fixed?",
     "update": "",
-    "closingComments": "Work Complete 9/10/2026 JJ",
-    "assignedTo": "Joshua Johnson",
-    "closedOn": "Thursday, September 10, 2026 3:01PM MDT",
-    "eventDate": "Thursday, September 10, 2026",
+    "closingComments": "Replaced the strike, repaired the spring cage on the lock",
+    "assignedTo": "Jason Moran",
+    "closedOn": "2026-09-02 4:04PM MDT",
+    "eventDate": "2026-09-02",
     "lastSeen": "2026-09-12T20:00:43.287Z",
-    "created": "Thursday, September 10, 2026"
-  },
-  {
-    "id": "99563",
-    "status": "open",
-    "category": "Doors/Locks/Keys",
-    "subcategory": "",
-    "description": "Keys issued to the COB",
-    "update": "",
-    "closingComments": "",
-    "assignedTo": "Stephanie Lyons",
-    "closedOn": "",
-    "eventDate": "Fri Sep 11 2026",
-    "lastSeen": "2026-09-11T19:20:58.418Z",
-    "created": "Friday, September 11, 2026"
-  },
-  {
-    "id": "93223",
-    "status": "open",
-    "category": "Campus Grounds",
-    "subcategory": "",
-    "description": "There is a wasp nest forming at the front of the College of Business Bandshell. Can we please have it removed as soon as possible? Thanks!",
-    "update": "",
-    "closingComments": "Finished",
-    "assignedTo": "Matthew Genger",
-    "closedOn": "Thursday, May 14, 2026 6:37AM MDT # #",
-    "eventDate": "Fri Sep 04 2026",
-    "lastSeen": "2026-09-04T14:10:56.279Z",
-    "created": "Fri Sep 04 2026"
-  },
-  {
-    "id": "32078",
-    "status": "open",
-    "category": "Custodial",
-    "subcategory": "",
-    "description": "Fixed front door.",
-    "update": "YOUR REQUEST CLICK THIS LINE# # #",
-    "closingComments": "",
-    "assignedTo": "Ian Hamilton",
-    "closedOn": "",
-    "eventDate": "Fri Sep 04 2026",
-    "lastSeen": "2026-09-04T14:05:56.274Z",
-    "created": "Fri Sep 04 2026"
-  },
-  {
-    "id": "71238",
-    "status": "open",
-    "category": "Custodial",
-    "subcategory": "",
-    "description": "GBB Coffee Spill Gallagher - coffee maker went rouge and spilled coffee all over the floor.",
-    "update": "YOUR REQUEST CLICK THIS LINE# # #",
-    "closingComments": "",
-    "assignedTo": "Ian Hamilton",
-    "closedOn": "",
-    "eventDate": "Fri Sep 04 2026",
-    "lastSeen": "2026-09-04T13:29:56.519Z",
-    "created": "Fri Sep 04 2026"
+    "created": "2026-09-02"
   },
   {
     "id": "99068",
@@ -149,23 +107,9 @@
     "closingComments": "",
     "assignedTo": "Ian Hamilton",
     "closedOn": "",
-    "eventDate": "September 1, 2026",
+    "eventDate": "2026-09-01",
     "lastSeen": "2026-09-03T22:13:00.000Z",
-    "created": "September 1, 2026"
-  },
-  {
-    "id": "99034",
-    "status": "complete",
-    "category": "Building Repairs",
-    "subcategory": "Other",
-    "description": "The door handle on the gender neutral restroom next to GBB 388 is messed up and will easily lock. Can we get this fixed?",
-    "update": "",
-    "closingComments": "Replaced the strike, repaired the spring cage on the lock",
-    "assignedTo": "Jason Moran",
-    "closedOn": "Wednesday, September 2, 2026 4:04PM MDT",
-    "eventDate": "Wednesday, September 2, 2026",
-    "lastSeen": "2026-09-12T20:00:43.287Z",
-    "created": "September 2, 2026"
+    "created": "2026-09-01"
   },
   {
     "id": "97054",
@@ -177,9 +121,9 @@
     "closingComments": "",
     "assignedTo": "Martin Fetter",
     "closedOn": "",
-    "eventDate": "August 28, 2026",
+    "eventDate": "2026-08-28",
     "lastSeen": "2026-09-03T22:13:00.000Z",
-    "created": "August 28, 2026"
+    "created": "2026-08-28"
   },
   {
     "id": "94276",
@@ -190,9 +134,9 @@
     "update": "",
     "closingComments": "Finished Status has been changed to \"Work Complete (Technician)\".",
     "assignedTo": "Matthew Genger",
-    "closedOn": "Thursday, May 14, 2026 6:37AM MDT",
-    "eventDate": "May 14, 2026",
+    "closedOn": "2026-05-14 6:37AM MDT",
+    "eventDate": "2026-05-14",
     "lastSeen": "2026-09-03T22:13:00.000Z",
-    "created": "May 14, 2026"
+    "created": "2026-05-14"
   }
 ]
