@@ -29,16 +29,16 @@
   },
   {
     "id": "99632",
-    "status": "open",
+    "status": "complete",
     "category": "Heating & Cooling",
     "subcategory": "Noises",
     "description": "Hearing a dripping sound in GBB 316's HVAC on the North Side of the office. No visual leaks. This is an unusual noise and hasn't occurred before.",
     "update": "",
-    "closingComments": "",
-    "assignedTo": "Andrew Williams",
-    "closedOn": "",
+    "closingComments": "Is normal noises of glycol going through the system.",
+    "assignedTo": "UMM HVAC",
+    "closedOn": "2026-09-14 3:50PM MDT",
     "eventDate": "2026-09-14",
-    "lastSeen": "2026-09-14T18:55:58.283Z",
+    "lastSeen": "2026-09-14T21:58:58.266Z",
     "created": "2026-09-14"
   },
   {
