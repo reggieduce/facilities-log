@@ -113,16 +113,16 @@
   },
   {
     "id": "99036",
-    "status": "in progress",
+    "status": "complete",
     "category": "Doors/Locks/Keys",
     "subcategory": "Door Repairs",
     "description": "The door on the North side of 348- an office of cubicles for our adjunct professors- does not unlock from the inside, only from the outside. Can we get this fixed so in an emergency our adjuncts can exit out of the North side of the room? Thank you!",
     "update": "Made repairs to the lock, cleaned and greased the lock parts. The lock should always be unlocked on the inside of 348, even if the lock is locked from the hallway.",
-    "closingComments": "",
+    "closingComments": "Made repairs to the lock, cleaned and greased the lock parts. The lock should always be unlocked on the inside of 348, even if the lock is locked from the hallway.",
     "assignedTo": "Jason Moran",
-    "closedOn": "",
-    "eventDate": "2026-09-15",
-    "lastSeen": "2026-09-15T21:25:33.656Z",
+    "closedOn": "2026-09-02 4:03PM MDT",
+    "eventDate": "2026-09-16",
+    "lastSeen": "2026-09-16T03:22:34.921Z",
     "created": "2026-09-02"
   },
   {
