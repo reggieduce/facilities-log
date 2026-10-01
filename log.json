@@ -1,5 +1,19 @@
 [
   {
+    "id": "98511",
+    "status": "complete",
+    "category": "Building Renov (Minor)",
+    "subcategory": "Built-in/Equip Removal",
+    "description": "GBB 329 needs a large portion of built in equipment removed and 1 piece added. This will include removing/moving the metal wall brackets. Please follow up with Julia in person to receive guidance. Equipment to be removed and surplused will be marked.",
+    "update": "",
+    "closingComments": "Work Work complete",
+    "assignedTo": "Justin O'Brien",
+    "closedOn": "2026-09-30 3:07PM MDT",
+    "eventDate": "2026-10-01",
+    "lastSeen": "2026-10-01T14:32:26.337Z",
+    "created": "2026-10-01"
+  },
+  {
     "id": "98793",
     "status": "complete",
     "category": "Heating & Cooling",
