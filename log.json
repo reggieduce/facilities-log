@@ -1,5 +1,19 @@
 [
   {
+    "id": "94564",
+    "status": "complete",
+    "category": "Building Repairs",
+    "subcategory": "Ceiling Leak",
+    "description": "We recently asked facilities to address the leak and fix the damage in GBB 355. Painting and patching occurred, but the same spot is leaking again. Can we please get the continuous leak fixed? Thanks!",
+    "update": "",
+    "closingComments": "Job",
+    "assignedTo": "Justin O'Brien",
+    "closedOn": "2026-10-05 2:37PM MDT",
+    "eventDate": "2026-10-06",
+    "lastSeen": "2026-10-06T14:17:49.825Z",
+    "created": "2026-10-06"
+  },
+  {
     "id": "97118",
     "status": "complete",
     "category": "Building Renov (Minor)",
@@ -71,16 +85,16 @@
   },
   {
     "id": "100125",
-    "status": "open",
+    "status": "complete",
     "category": "Plumbing",
     "subcategory": "Clogged Toilet/Urinal/Sink",
     "description": "The sink in the Dean's kitchen, GBB 384, is draining slowly- could be working toward a clog. Thanks!",
     "update": "",
-    "closingComments": "",
-    "assignedTo": "Luke Woodward",
-    "closedOn": "",
-    "eventDate": "2026-09-25",
-    "lastSeen": "2026-09-25T20:59:24.461Z",
+    "closingComments": "Cleared drains",
+    "assignedTo": "Slade Johnson",
+    "closedOn": "2026-10-05 2:55PM MDT",
+    "eventDate": "2026-10-06",
+    "lastSeen": "2026-10-06T14:17:49.826Z",
     "created": "2026-09-25"
   },
   {
