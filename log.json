@@ -15,16 +15,16 @@
   },
   {
     "id": "100838",
-    "status": "open",
+    "status": "complete",
     "category": "Doors/Locks/Keys",
     "subcategory": "Lock Repairs",
     "description": "The lock on GBB 353 is still a bit sticky with some keys- for example, Key 33009 belonging to Emily plant won't turn the lock. You can tell it fits and it wants to, but the lock is fighting it.",
     "update": "",
-    "closingComments": "",
-    "assignedTo": "Stephanie Lyons",
-    "closedOn": "",
-    "eventDate": "2026-10-19",
-    "lastSeen": "2026-10-19T19:19:49.383Z",
+    "closingComments": "Re-pinned the cylinder, tested the keys.",
+    "assignedTo": "Jason Moran",
+    "closedOn": "2026-10-21 10:47AM MDT",
+    "eventDate": "2026-10-21",
+    "lastSeen": "2026-10-21T17:24:49.674Z",
     "created": "2026-10-19"
   },
   {
