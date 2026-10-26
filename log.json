@@ -1,5 +1,19 @@
 [
   {
+    "id": "101067",
+    "status": "open",
+    "category": "Custodial",
+    "subcategory": "Pest Control",
+    "description": "A faculty member reported what she believed to be the sounds of mice activity in the vents in bathroom GBB 387.",
+    "update": "",
+    "closingComments": "",
+    "assignedTo": "Ian Hamilton",
+    "closedOn": "",
+    "eventDate": "2026-10-26",
+    "lastSeen": "2026-10-26T14:41:49.281Z",
+    "created": "2026-10-26"
+  },
+  {
     "id": "101004",
     "status": "complete",
     "category": "Heating & Cooling",
