@@ -1,16 +1,16 @@
 [
   {
     "id": "101004",
-    "status": "open",
+    "status": "complete",
     "category": "Heating & Cooling",
     "subcategory": "Too Hot",
     "description": "3rd floor of Gallagher building has office temps ranging from 71-80 degrees. 71 makes sense, 80 is too high. Seeing the highest temps on the South side of the building. 2nd floor offices also have rooms with 75-77 degrees. Can the temp regulation in the building be looked at and heating temps turned down please? Thank you!",
     "update": "",
-    "closingComments": "",
-    "assignedTo": "Andrew Williams",
-    "closedOn": "",
-    "eventDate": "2026-10-22",
-    "lastSeen": "2026-10-22T22:16:49.404Z",
+    "closingComments": "Completed.",
+    "assignedTo": "UMM HVAC",
+    "closedOn": "2026-10-23 3:17PM MDT",
+    "eventDate": "2026-10-26",
+    "lastSeen": "2026-10-26T14:17:49.411Z",
     "created": "2026-10-22"
   },
   {
