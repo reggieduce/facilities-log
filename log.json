@@ -1,5 +1,19 @@
 [
   {
+    "id": "97520",
+    "status": "complete",
+    "category": "Building Renov (Minor)",
+    "subcategory": "Other",
+    "description": "Can the lights in GBB 108 add a feature where they can be turned on and off, rather than just being activated by motion? Thanks!",
+    "update": "",
+    "closingComments": "work completed",
+    "assignedTo": "Aaron Greene",
+    "closedOn": "2026-10-27 8:53AM MDT",
+    "eventDate": "2026-10-27",
+    "lastSeen": "2026-10-27T18:50:49.419Z",
+    "created": "2026-10-27"
+  },
+  {
     "id": "101048",
     "status": "open",
     "category": "Building Repairs",
