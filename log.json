@@ -1,5 +1,33 @@
 [
   {
+    "id": "101139",
+    "status": "open",
+    "category": "Plumbing",
+    "subcategory": "Clogged Toilet/Urinal/Sink",
+    "description": "A toilet in the men's restroom on the NW side of the 3rd floor of the College of Business won't flush.",
+    "update": "",
+    "closingComments": "",
+    "assignedTo": "Luke Woodward",
+    "closedOn": "",
+    "eventDate": "2026-10-27",
+    "lastSeen": "2026-10-27T19:51:49.539Z",
+    "created": "2026-10-27"
+  },
+  {
+    "id": "101136",
+    "status": "open",
+    "category": "Building Repairs",
+    "subcategory": "Equipment Repairs",
+    "description": "The middle section of Erik Guzik's desk has fallen off the wall, so it needs to be put back on the wall. It is right next to his monitor, so we would love to have someone come over as soon as possible to get that desk space back. Thanks!",
+    "update": "",
+    "closingComments": "",
+    "assignedTo": "Larry Tarver",
+    "closedOn": "",
+    "eventDate": "2026-10-27",
+    "lastSeen": "2026-10-27T19:51:49.538Z",
+    "created": "2026-10-27"
+  },
+  {
     "id": "97520",
     "status": "complete",
     "category": "Building Renov (Minor)",
