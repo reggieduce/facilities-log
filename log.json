@@ -183,16 +183,16 @@
   },
   {
     "id": "100612",
-    "status": "open",
+    "status": "complete",
     "category": "Heating & Cooling",
     "subcategory": "Noises",
     "description": "In office GBB 374, the HVAC or something else in the ceiling, is rattling regularly and is distracting the occupant. Could this be looked at when there is time? Thanks!",
     "update": "",
-    "closingComments": "",
-    "assignedTo": "Andrew Williams",
-    "closedOn": "",
-    "eventDate": "2026-10-12",
-    "lastSeen": "2026-10-12T15:19:49.390Z",
+    "closingComments": "Unit is running again",
+    "assignedTo": "Jim Lyon",
+    "closedOn": "2026-10-28 2:37PM MDT",
+    "eventDate": "2026-10-28",
+    "lastSeen": "2026-10-28T20:38:49.391Z",
     "created": "2026-10-12"
   },
   {
