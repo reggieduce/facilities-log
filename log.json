@@ -15,16 +15,16 @@
   },
   {
     "id": "101215",
-    "status": "open",
+    "status": "complete",
     "category": "Building Repairs",
     "subcategory": "Elevator Malfunctioning",
     "description": "GBB E Elevator Gallagher - East elevator is making noise and pausing while running. Ref: 1039160",
     "update": "",
-    "closingComments": "",
-    "assignedTo": "Mike Tooker",
-    "closedOn": "",
+    "closingComments": "Dave got this completed this morning.",
+    "assignedTo": "Elevators UMM",
+    "closedOn": "2026-10-29 1:14PM MDT",
     "eventDate": "2026-10-29",
-    "lastSeen": "2026-10-29T15:48:49.461Z",
+    "lastSeen": "2026-10-29T20:23:49.282Z",
     "created": "2026-10-29"
   },
   {
