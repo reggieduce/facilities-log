@@ -1,5 +1,19 @@
 [
   {
+    "id": "101447",
+    "status": "open",
+    "category": "Lighting/Electrical",
+    "subcategory": "Power Loss/Interruption",
+    "description": "Power has partially gone out in the GSSC. 3 offices belonging to: Austin Tompkins, Dawn Hambrick, Traci Beighle",
+    "update": "",
+    "closingComments": "",
+    "assignedTo": "Derik Geuke",
+    "closedOn": "",
+    "eventDate": "2026-11-02",
+    "lastSeen": "2026-11-02T18:29:49.380Z",
+    "created": "2026-11-02"
+  },
+  {
     "id": "101429",
     "status": "open",
     "category": "Building Renov (Minor)",
