@@ -1,5 +1,19 @@
 [
   {
+    "id": "101996",
+    "status": "open",
+    "category": "Heating & Cooling",
+    "subcategory": "Too Cold",
+    "description": "There is an issue with the sensor in GBB 366- It is blowing AC in the room, and the room shows an error in Johnson Controls.",
+    "update": "",
+    "closingComments": "",
+    "assignedTo": "Andrew Williams",
+    "closedOn": "",
+    "eventDate": "2026-11-19",
+    "lastSeen": "2026-11-19T17:40:49.443Z",
+    "created": "2026-11-19"
+  },
+  {
     "id": "101670",
     "status": "open",
     "category": "Building Renov (Minor)",
