@@ -1,5 +1,19 @@
 [
   {
+    "id": "102035",
+    "status": "open",
+    "category": "Lighting/Electrical",
+    "subcategory": "Other",
+    "description": "In office GBB 329, is it possible to change the switch from motion sensor, to flipping on and off. The light is often going off on the professor in the office and the sensor can't see his motion from his desk.",
+    "update": "",
+    "closingComments": "",
+    "assignedTo": "Derik Geuke",
+    "closedOn": "",
+    "eventDate": "2026-11-20",
+    "lastSeen": "2026-11-20T17:43:49.366Z",
+    "created": "2026-11-20"
+  },
+  {
     "id": "101996",
     "status": "open",
     "category": "Heating & Cooling",
